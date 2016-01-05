@@ -25,11 +25,11 @@ Blockspring is installed. To initialize it, open your Node.js environment and en
 
 ## Blockspring-CLI tool
 
-1. Install the Blockspring-CLI tool
+1: Install the Blockspring-CLI tool
 
 >$ gem install blockspring-cli
 
-2. Login to Blockspring
+2: Login to Blockspring
 
 We'll need to login with our Blockspring account. No Blockspring account yet? Sign up [here](https://api.blockspring.com/users/sign_up) first.
 
@@ -41,7 +41,7 @@ Password (typing will be hidden):
 You are logged in as [name].
 ```
 
-3. Create a new block
+3: Create a new block
 
 We can create blocks in ruby, python, javascript, php, or R (and more languages are coming soon). Let's create a node block.
 
@@ -52,7 +52,7 @@ Creating script file my-new-node-block/block.js
 Creating config file my-new-node-block/blockspring.json
 ```
 
-4. Deploy your block
+4: Deploy your block
 
 Let's enter our new block's directory and deploy.
 
@@ -63,7 +63,7 @@ Syncronizing script file ./block.js
 Syncronizing config file ./blockspring.json
 ```
 
-5. Visit your block's homepage
+5: Visit your block's homepage
 
 Now that our block is now deployed we can visit its homepage to see it in action.
 
