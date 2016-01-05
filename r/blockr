@@ -1,0 +1,52 @@
+suppressMessages(library("blockspring"))
+suppressMessages(library("stringr"))
+
+webhook = function(team_domain, service_id, token, user_name, team_id, user_id, channel_id, timestamp, channel_name, text, trigger_word, raw_text) {
+
+    # Basic bot will just echo back the message
+    response = paste(
+        list("*", user_name, "* said _", text, "_"),
+        collapse = ''
+   	)
+
+    return (list(
+        text = response,  # send a text response (replies to channel if not blank)
+        attachments = list(), # add attatchments: https://api.slack.com/docs/attachments
+        username = "",    # overwrite configured username (ex: MyCoolBot)
+        icon_url = "",    # overwrite configured icon (ex: https://mydomain.com/some/image.png
+        icon_emoji = ""  # overwrite configured icon (ex: :smile:)
+    ))
+}
+
+blockspringDefine(function(request, response) {
+    team_domain = request$params$team_domain
+    service_id = request$params$service_id
+    token = request$params$token
+    user_name = request$params$user_name
+    team_id = request$params$team_id
+    user_id = request$params$user_id
+    channel_id = request$params$channel_id
+    timestamp = request$params$timestamp
+    channel_name = request$params$channel_name
+    raw_text = text = request$params$text
+    trigger_word = request$params$trigger_word
+
+    # ignore all bot messages
+    if (!is.null(user_id) && user_id == 'USLACKBOT') { return }
+
+    if(!is.null(trigger_word)) {
+        text = str_trim(substr(text, nchar(trigger_word) + 1, nchar(text)))
+    }
+
+    # Execute bot function
+    output = webhook(team_domain, service_id, token, user_name, team_id, user_id, channel_id, timestamp, channel_name, text, trigger_word, raw_text)
+
+    # set any keys that aren't blank
+    for (k in names(output)){
+        if(!is.null(output[[k]]) && length(output[[k]]) > 0 && output[[k]] != "") {
+        	response$addOutput(k, output[[k]])
+        }
+    }
+
+    response$end()
+})
