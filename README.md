@@ -17,7 +17,7 @@ This setup is for NODE.JS
 
 First, install Blockspring. Go to a working /dir that you want to store your bots in, From your command line, enter:
 
->npm install blockspring
+>npm install
 
 Blockspring is installed. To initialize it, open your Node.js environment and enter:
 
@@ -45,7 +45,8 @@ You are logged in as [name].
 
 We can create blocks in ruby, python, javascript, php, or R (and more languages are coming soon). Let's create a node block.
 
->$ blockspring new node "My new node block"
+>$ cd bots/
+>$ blockspring new js "My new node block"
 ```
 Creating directory my-new-node-block
 Creating script file my-new-node-block/block.js

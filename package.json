@@ -1,0 +1,21 @@
+{
+  "name": "serverless-slackbots",
+  "version": "1.0.0",
+  "description": "Serverless Slackbots with Blockspring",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ijones922/serverless-slackbots.git"
+  },
+  "author": "Ian Jones",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ijones922/serverless-slackbots/issues"
+  },
+  "homepage": "https://github.com/ijones922/serverless-slackbots#readme",
+  "dependencies": {
+    "blockspring": "0.0.6"
+  }
+}
