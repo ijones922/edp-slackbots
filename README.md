@@ -11,7 +11,7 @@ Read More [Here](http://venturebeat.com/2015/10/26/blockspring-the-do-anything-i
 This App allows slash commands to search, view and use the webhooks of existing blocks on blockspring.com. Download that [here](https://www.blockspring.com/help/install_plugins)
 
 ## Installing to develop locally
-For all Language setups go here for [documentation}(https://www.blockspring.com/docs)
+For all Language setups go here for [documentation](https://www.blockspring.com/docs)
 
 This setup is for NODE.JS
 
@@ -40,6 +40,7 @@ Username or email: name@example.com
 Password (typing will be hidden):
 You are logged in as [name].
 ```
+
 3. Create a new block
 
 We can create blocks in ruby, python, javascript, php, or R (and more languages are coming soon). Let's create a node block.
@@ -61,6 +62,7 @@ Let's enter our new block's directory and deploy.
 Syncronizing script file ./block.js
 Syncronizing config file ./blockspring.json
 ```
+
 5. Visit your block's homepage
 
 Now that our block is now deployed we can visit its homepage to see it in action.
