@@ -34,29 +34,33 @@ Blockspring is installed. To initialize it, open your Node.js environment and en
 We'll need to login with our Blockspring account. No Blockspring account yet? Sign up [here](https://api.blockspring.com/users/sign_up) first.
 
 >$ blockspring login
+```
 Enter your Blockspring credentials.
 Username or email: name@example.com
 Password (typing will be hidden):
 You are logged in as [name].
-
+```
 3. Create a new block
 
 We can create blocks in ruby, python, javascript, php, or R (and more languages are coming soon). Let's create a node block.
 
 >$ blockspring new node "My new node block"
+```
 Creating directory my-new-node-block
 Creating script file my-new-node-block/block.js
 Creating config file my-new-node-block/blockspring.json
+```
 
 4. Deploy your block
 
 Let's enter our new block's directory and deploy.
 
 >$ cd my-new-node-block
-$ blockspring push
+>$ blockspring push
+```
 Syncronizing script file ./block.js
 Syncronizing config file ./blockspring.json
-
+```
 5. Visit your block's homepage
 
 Now that our block is now deployed we can visit its homepage to see it in action.
@@ -69,4 +73,6 @@ With certain params that you define within your blockspring.json and in block.js
 
 Within your newly created block, run this in console. The --text is the param defined within my .json file and will be defined within my block.js. you should see a object returned thats optimized for slack, You can look at their API docs [here](https://api.slack.com/docs/attachments).
 >$blockspring run node block.js --text=hello
+```
 {"_blockspring_spec":true,"_errors":[],"text":"Hi you","attachments":[null]}
+```
